@@ -7,13 +7,16 @@ let pd=document.getElementById('pd').addEventListener('click',function(){
     var mostra=document.getElementById('mostra')
 
     let dd=dados.value
-    if(dd.length>0){
+    if(dd.length>0 && dd<=100 && dd>0){
 
         usar_dados.innerHTML+=`Valor ${dd} foi adicionado.\n\n`
         pega.push(dd)
         console.log(pega)
         mostra.innerHTML=''
 
+    }
+    else{
+        alert('Preenche bem os campos por favor')
     }
 })
 
